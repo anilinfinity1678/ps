@@ -4,17 +4,81 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>QR Code Generator</title>
-        <link rel="stylesheet" href="/style.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
     </head>
     <body>
-        <div class="container">
-            <h2>HII</h2>
-            <p class="tree">My name is <%= data.name %></p>
-            <p class="scientific-name">
-                I will also called <%= data.scientificName%>
-            </p>
-            <p class="tree-height">my height is <%= data.height %></p>
-            <p class="tree-age">my age is approximately <%= data.age %></p>
+        <div
+            class="main"
+            style="display: flex; flex-direction:column;
+        text-align:center;align-items:center; justify-content:center; "
+        >
+            <div
+                class="container"
+                style="background-color: rgb(52, 184, 70);
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap');
+        font-family: 'Poppins', sans-serif; line-height:rem; font-size:0.7rem; width:400px; height: 800px;
+        text-align: center;
+        padding-right: 20px;  "
+            >
+                <h1><%= message %></h1>
+                <h2>HII</h2>
+                <div class="for-whole for-data">
+                    <ul>
+                        <li>Hey👋 !</li>
+
+   
+    <li style=" list-style:none  ">
+                            👉 My Name is
+                            <h4 class="for-hightlighting-fetcheddata">
+                                Beach Tree
+                            </h4>
+                        </li>
+
+                        <li style=" list-style:none  ">
+                            👉 I will also be called as
+                            <h4 class="for-hightlighting-fetcheddata"
+                                >Pongame Oil</
+                            >
+                            scientifically
+                        </li>
+
+                        <li style=" list-style:none  ">
+                            👉 My Height is
+                            <h4 class="for-hightlighting-fetcheddata"
+                                >22 meters</h4
+                            >
+                            Approximate age of mine is 15 years
+                        </li>
+
+                        <li style=" list-style:none  ">
+                            👉 I am located at GPS location of
+                            <h4 class="for-hightlighting-fetcheddata"
+                                >13.626625(Lattitude)</h4
+                            >
+                            and
+                            < className="for-hightlighting-fetcheddata"
+                                >79.395722(Longitude)
+                        </h4>
+                        </li>
+
+                        <li style=" list-style:none  ">
+                            👉 I have absorbed
+                            <h4 class="for-hightlighting-fetcheddata"
+                                >6.48 </h4
+                            >tons of carbon till today will absorb
+                            <h4 class="for-hightlighting-fetcheddata"
+                                >0.43</h4
+                            >
+                            tons of average carbon every year
+                        </li>
+
+                        <li style=" list-style:none  ">
+                            👉 My carbon absorption capacity will increase as I
+                            grow!
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>
