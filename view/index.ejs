@@ -20,55 +20,57 @@
         text-align: center;
         padding-right: 20px;  "
             >
-                <h1><%= message %></h1>
+                <div class="svu">
+                    <img src="public\planetwise.jpg" alt="" />
+                </div>
                 <h2>HII</h2>
                 <div class="for-whole for-data">
                     <ul>
                         <li>Hey👋 !</li>
 
-   
-    <li style=" list-style:none  ">
+                        <li style=" list-style:none">
                             👉 My Name is
                             <h4 class="for-hightlighting-fetcheddata">
-                                Beach Tree
+                                <%= tree.name%>
                             </h4>
                         </li>
 
                         <li style=" list-style:none  ">
                             👉 I will also be called as
-                            <h4 class="for-hightlighting-fetcheddata"
-                                >Pongame Oil</
-                            >
+                            <h4 class="for-hightlighting-fetcheddata">
+                                <%= tree.scientific %>
+                            </h4>
                             scientifically
                         </li>
 
                         <li style=" list-style:none  ">
                             👉 My Height is
-                            <h4 class="for-hightlighting-fetcheddata"
-                                >22 meters</h4
-                            >
-                            Approximate age of mine is 15 years
+                            <h4 class="for-hightlighting-fetcheddata">
+                                <%= tree.height %>meters
+                            </h4>
+                            Approximate age of mine is <%= tree.age %> years
                         </li>
 
                         <li style=" list-style:none  ">
                             👉 I am located at GPS location of
-                            <h4 class="for-hightlighting-fetcheddata"
-                                >13.626625(Lattitude)</h4
-                            >
+                            <h4 class="for-hightlighting-fetcheddata">
+                                <%= tree.latitude %> (Lattitude)
+                            </h4>
                             and
-                            < className="for-hightlighting-fetcheddata"
-                                >79.395722(Longitude)
-                        </h4>
+                            <h4 className="for-hightlighting-fetcheddata">
+                                <%= tree.longitude %>(Longitude)
+                            </h4>
                         </li>
 
                         <li style=" list-style:none  ">
                             👉 I have absorbed
-                            <h4 class="for-hightlighting-fetcheddata"
-                                >6.48 </h4
-                            >tons of carbon till today will absorb
-                            <h4 class="for-hightlighting-fetcheddata"
-                                >0.43</h4
-                            >
+                            <h4 class="for-hightlighting-fetcheddata">
+                                <%= tree.carbonEmission%>
+                            </h4>
+                            tons of carbon till today will absorb
+                            <h4 class="for-hightlighting-fetcheddata">
+                                <%= tree.AnualCarbon %>
+                            </h4>
                             tons of average carbon every year
                         </li>
 
@@ -76,6 +78,8 @@
                             👉 My carbon absorption capacity will increase as I
                             grow!
                         </li>
+
+                        <li style="list-style:none"><%= tree.facts %></li>
                     </ul>
                 </div>
             </div>
