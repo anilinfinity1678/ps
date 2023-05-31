@@ -23,6 +23,7 @@
                 scrollbar-width: thin;
                 scrollbar-color: white white;
                 padding: 20px;   
+        
             }
             .tree-data::-webkit-scrollbar {
                 width: 10px;
@@ -44,6 +45,7 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 10px;
+             
             }
 
             .tree-detail-data p {
@@ -87,13 +89,13 @@
                
                 <div class="for-whole for-data">
                     <div class="tree-data">
-                        <h2>Hello!!!</h2>
+                        <h2>Hello!!👋!</h2>
                         <br>
                         <div class="tree-detail-data">
                            <div class="tree-char" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
                             <p>
                                 My Name is
-                                <h4 class="for-hightlighting-fetcheddata"><%= tree.treeName%></h4>
+                                <strong class="for-hightlighting-fetcheddata"><%= tree.treeName%> 🌳🌳</strong>
                            </p>
                            </div>
                            <div class="tree-char" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
@@ -106,33 +108,37 @@
                            <div class="tree-char" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
                             <p>
                                 My Height is
-                               <h4 class="for-hightlighting-fetcheddata"> <%= tree.height %> meters</h4>
-                               I am <%= tree.diameter %>meters Round.
+                               <strong class="for-hightlighting-fetcheddata"> <%= tree.height %> meters 📏📏</strong>
+                            
                            </p>
+                           </div>
+
+                           <div class="tree-char">
+<p>
+    I am <strong> <%= tree.diameter %> meters</strong> 😉 Round.
+</p>
                            </div>
                            <div class="tree-char" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">
                             <p>
-                                I am located at GPS location of
-                               <h4 class="for-hightlighting-fetcheddata">   <%= tree.lattitude %>(Lattitude)</h4>
+                                I am located at 🗺️GPS location of
+                               <strong class="for-hightlighting-fetcheddata">   <%= tree.lattitude %>(Latitude)</strong>
                                and
-                               <h4 className="for-hightlighting-fetcheddata"> <%= tree.longitude %>(Longitude)</h4>
+                               <strong className="for-hightlighting-fetcheddata"> <%= tree.longitude %>(Longitude)</strong>
                            </p>
                            </div>
-                           <div class="tree-char" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true">
-                            <p>
-                                I have absorbed
-                               <h4 class="for-hightlighting-fetcheddata"> <%= tree.co2Absorbed%></h4>
-                               tons of carbon till today and will absorb
-                               <h4 class="for-hightlighting-fetcheddata">  <%= tree.averageco2Absorbed %></h4>
-                               tons of average carbon every year
-                           </p>
-                           </div>
-                           <div class="tree-char" data-aos="fade-up" data-aos-duration="5000" data-aos-once="true">
-                            <p>
-                                My carbon absorption capacity will increase as I grow!
-                           </p>
-                           </div>
-                           <div class="tree-char" data-aos="fade-up" data-aos-duration="5000" data-aos-once="true">
+
+
+
+                           <div class="tree-char" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"><p>I have absorbed <b class="for-hightlighting-fetcheddata"><%= tree.co2Absorbed%></b> tons of carbon till today and will absorb <b class="for-hightlighting-fetcheddata"><%= tree.averageco2Absorbed %></b> <p>tons of average carbon every year</p></p></div><div class="tree-char"><p>My carbon absorption capacity will increase as I grow!</p></div>
+
+
+
+
+
+                           <div class="tree-char" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" >
+                           <h3>
+                            My benefits
+                           </h3>
                             <p>
                                 <%- tree.benefits %>
                             </p>
