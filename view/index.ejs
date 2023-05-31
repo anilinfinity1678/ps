@@ -4,85 +4,168 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>QR Code Generator</title>
-        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="/style.css" type="text/css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <style>
+            .for-whole {
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+                background: white;
+                border-radius: 40px;
+                height: 600px;
+                overflow: hidden;
+            }
+
+            .tree-data {
+                overflow-y: scroll;
+                height: 100%;
+                scrollbar-width: thin;
+                scrollbar-color: white white;
+                padding: 20px;   
+            }
+            .tree-data::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            .tree-data::-webkit-scrollbar-track {
+                background-color: white;
+            }
+
+            .tree-data::-webkit-scrollbar-thumb {
+                background-color: rgb(143, 208, 143);
+                border-radius: 5px;
+            }
+
+            .tree-detail-data {
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            .tree-detail-data p {
+                margin-bottom: 5px;
+            }
+
+            .tree-detail-data h4 {
+                margin: 0;
+            }
+          
+            .tree-char{
+                width:300px;
+                border-radius: 6px;
+                border:2px solid greenyellow
+            }
+
+            body {
+                position: relative;
+                top: 50%;
+            }
+        </style>
     </head>
     <body>
-        <div
-            class="main"
-            style="display: flex; flex-direction:column;
-        text-align:center;align-items:center; justify-content:center; "
-        >
-            <div
-                class="container"
-                style="background-color: rgb(52, 184, 70);
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap');
-        font-family: 'Poppins', sans-serif; line-height:rem; font-size:0.7rem; width:400px; height: 800px;
-        text-align: center;
-        padding-right: 20px;  "
-            >
-                <div class="svu">
-                    <img src="public\planetwise.jpg" alt="" />
+        <div class="main" style="display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center;">
+            <div class="container" style="background-color: #E2FFCC; font-family: 'Poppins', sans-serif; line-height: 1rem; font-size: 1rem; width: 400px; height: 700px;">
+              
+              <br>
+              
+                <div class="logos" style="display: flex; gap:200px; padding-left:20px;">
+                <div class="planet">
+                    <img src="/public/images/planetwise.png" alt="Planet Wise" style="height: 50px; width:100px;">
+
                 </div>
-                <h2>HII</h2>
+                
+                <div class="svu">
+                    <img src="/public/images/svulogo.png" alt="Planet Wise" style="height: 50px; width:50px;">
+
+                </div>
+               </div>
+               <br>
+               
                 <div class="for-whole for-data">
-                    <ul>
-                        <li>Hey👋 !</li>
-
-                        <li style=" list-style:none">
-                            👉 My Name is
-                            <h4 class="for-hightlighting-fetcheddata">
-                                <%= tree.name%>
-                            </h4>
-                        </li>
-
-                        <li style=" list-style:none  ">
-                            👉 I will also be called as
-                            <h4 class="for-hightlighting-fetcheddata">
-                                <%= tree.scientific %>
-                            </h4>
-                            scientifically
-                        </li>
-
-                        <li style=" list-style:none  ">
-                            👉 My Height is
-                            <h4 class="for-hightlighting-fetcheddata">
-                                <%= tree.height %>meters
-                            </h4>
-                            Approximate age of mine is <%= tree.age %> years
-                        </li>
-
-                        <li style=" list-style:none  ">
-                            👉 I am located at GPS location of
-                            <h4 class="for-hightlighting-fetcheddata">
-                                <%= tree.latitude %> (Lattitude)
-                            </h4>
-                            and
-                            <h4 className="for-hightlighting-fetcheddata">
-                                <%= tree.longitude %>(Longitude)
-                            </h4>
-                        </li>
-
-                        <li style=" list-style:none  ">
-                            👉 I have absorbed
-                            <h4 class="for-hightlighting-fetcheddata">
-                                <%= tree.carbonEmission%>
-                            </h4>
-                            tons of carbon till today will absorb
-                            <h4 class="for-hightlighting-fetcheddata">
-                                <%= tree.AnualCarbon %>
-                            </h4>
-                            tons of average carbon every year
-                        </li>
-
-                        <li style=" list-style:none  ">
-                            👉 My carbon absorption capacity will increase as I
-                            grow!
-                        </li>
-
-                        <li style="list-style:none"><%= tree.facts %></li>
-                    </ul>
+                    <div class="tree-data">
+                        <h2>Hello!!!</h2>
+                        <br>
+                        <div class="tree-detail-data">
+                           <div class="tree-char" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                            <p>
+                                My Name is
+                                <h4 class="for-hightlighting-fetcheddata"><%= tree.treeName%></h4>
+                           </p>
+                           </div>
+                           <div class="tree-char" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                            <p>
+                                I am scientifically called as <span>  <h4 class="for-hightlighting-fetcheddata">
+                                    <%= tree.scientificName %>
+                                  </h4> </span>
+                           </p>
+                           </div>
+                           <div class="tree-char" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                            <p>
+                                My Height is
+                               <h4 class="for-hightlighting-fetcheddata"> <%= tree.height %> meters</h4>
+                               I am <%= tree.diameter %>meters Round.
+                           </p>
+                           </div>
+                           <div class="tree-char" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">
+                            <p>
+                                I am located at GPS location of
+                               <h4 class="for-hightlighting-fetcheddata">   <%= tree.lattitude %>(Lattitude)</h4>
+                               and
+                               <h4 className="for-hightlighting-fetcheddata"> <%= tree.longitude %>(Longitude)</h4>
+                           </p>
+                           </div>
+                           <div class="tree-char" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true">
+                            <p>
+                                I have absorbed
+                               <h4 class="for-hightlighting-fetcheddata"> <%= tree.co2Absorbed%></h4>
+                               tons of carbon till today and will absorb
+                               <h4 class="for-hightlighting-fetcheddata">  <%= tree.averageco2Absorbed %></h4>
+                               tons of average carbon every year
+                           </p>
+                           </div>
+                           <div class="tree-char" data-aos="fade-up" data-aos-duration="5000" data-aos-once="true">
+                            <p>
+                                My carbon absorption capacity will increase as I grow!
+                           </p>
+                           </div>
+                           <div class="tree-char" data-aos="fade-up" data-aos-duration="5000" data-aos-once="true">
+                            <p>
+                                <%- tree.benefits %>
+                            </p>
+                        </div>
+                        
+                           </div>
+                      
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            // Get the .tree-data container element
+            const treeDataContainer = document.querySelector('.tree-data');
+
+            // Function to handle scroll event
+            function handleScroll() {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const containerOffsetTop = treeDataContainer.offsetTop;
+
+                if (scrollTop >= containerOffsetTop) {
+                    treeDataContainer.classList.add('show-data');
+                } else {
+                    treeDataContainer.classList.remove('show-data');
+                }
+            }
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
     </body>
 </html>
